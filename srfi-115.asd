@@ -46,7 +46,9 @@ https://srfi.schemers.org/srfi-115"
           "https://github.com/g000001/srfi-115#internals")))
     (eval
      (read-from-string "
-                (or (run-tests) 
+                (or (begin
+                      (test-runner-current (test-runner-create))
+                      (run-tests)) 
                     (error \"test-op failed\"))"))))
 
 ;;; *EOF*

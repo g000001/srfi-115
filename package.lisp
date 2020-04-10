@@ -63,7 +63,9 @@
    "https://github.com/g000001/srfi-64"
    test-begin
    test-end
-   test-equal)
+   test-equal
+   test-runner-current
+   test-runner-create)
   (:shadowing-import-from 
    "https://github.com/g000001/srfi-4"
    u8vector))
