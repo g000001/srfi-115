@@ -7,7 +7,7 @@
 (define-syntax test
   (syntax-rules ()
     ((test expected actual)
-     (srfi-64:test-equal expected actual))))
+     (test-equal expected actual))))
 
 (define (maybe-match->list rx str . o)
   (let ((res (apply #'regexp-matches rx str o)))
@@ -37,7 +37,7 @@
 
 (define (run-tests)
   
-  (srfi-64:test-begin "regexp")
+  (test-begin "regexp")
 
   (test-re '("ababc" "abab")
            '(! ($ (* "ab")) "c")
@@ -243,7 +243,7 @@ abc
   (test '("한" "글")
     (regexp-extract
      'grapheme
-     (utf8->string (srfi-4:u8vector
+     (utf8->string (u8vector
                     #xe1 #x84 #x92 #xe1 #x85 #xa1 #xe1 #x86 #xab
                     #xe1 #x84 #x80 #xe1 #x85 #xb3 #xe1 #x86 #xaf))))
 
@@ -298,6 +298,6 @@ abc
      '("pre: <<<" pre ">>> match1: <<<" 1 ">>> post: <<<" post ">>>")
      1 11))
 
-  (srfi-64:test-end)
+  (test-end)
   #t
   )

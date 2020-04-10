@@ -1,6 +1,7 @@
 ;;;; srfi-115.lisp -*- Mode: Lisp;-*- 
 
 (cl:in-package "https://github.com/g000001/srfi-115#internals")
+(in-syntax srfi-115-syntax)
 
 ;; regexp.scm -- simple non-bactracking NFA implementation
 ;; Copyright (c) 2013-2016 Alex Shinn.  All rights reserved.

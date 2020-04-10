@@ -18,9 +18,10 @@ https://srfi.schemers.org/srfi-115"
                srfi-13
                srfi-14
                srfi-60
+               srfi-64
                srfi-1
                srfi-4
-               reader.r6rs)
+               r6rs-reader)
   :components ((:file "package")
                (:file "readtable")
                (:file "utils")

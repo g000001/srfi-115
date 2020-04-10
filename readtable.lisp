@@ -10,7 +10,7 @@
 
 (eval-always
   (let ((cl:*readtable* (cl:copy-readtable srfi-172-syntax)))
-    (cl:set-macro-character #\" #'reader.r6rs:read-r6rs-string)
+    (cl:set-macro-character #\" #'r6rs-reader:read-r6rs-string)
     (cl:defconstant srfi-115-syntax cl:*readtable*)))
 
 
